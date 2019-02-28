@@ -125,6 +125,7 @@ y = tsne.fit_transform(X)
 from matplotlib import font_manager
 
 plt.rcParams['font.sans-serif'] = ['SimHei']
+plt.rcParams['axes.unicode_minus'] = False
 
 c= np.random.rand(y.shape[0]) 
 plt.scatter(y[:,0], y[:,1], c = c) 
