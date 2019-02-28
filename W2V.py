@@ -16,9 +16,7 @@ import jieba.analyse
 
 
 comments = pd.read_csv('DM/1.csv')  
-comments.Score.replace('Null', np.nan, inplace = True)   
-imputer = SimpleImputer(strategy = 'median')
-comments.Score = imputer.fit_transform(comments[['Score']])
+
 comments.Score.replace([10.0, 20.0, 30.0, 40.0, 50.0], [1,2,3,4,5], inplace = True) 
 
 
